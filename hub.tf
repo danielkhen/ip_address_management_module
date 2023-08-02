@@ -16,10 +16,10 @@ locals {
 
 output "hub" {
   description = "An object containing ip addresses and prefixes of resources in the hub."
-  value       = {
-    vnet_address_prefix  = local.hub_vnet_address_prefix
-    vpn_address_prefix   = local.hub_vpn_address_prefix
-    subnet_address_prefixes              = local.hub_subnets
-    private_ip_addresses = local.hub_private_ip_addresses
+  value = {
+    vnet_address_prefix     = local.hub_vnet_address_prefix
+    vpn_address_prefix      = local.hub_vpn_address_prefix
+    subnet_address_prefixes = local.hub_subnets
+    private_ip_addresses    = local.hub_private_ip_addresses
   }
 }
