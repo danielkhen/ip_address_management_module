@@ -10,7 +10,7 @@ locals {
   }
 
   hub_private_ip_addresses = {
-    firewall = cidrhost(local.subnet_address_prefixes.hub.AzureFirewallSubnet, 4) #10.1.0.4
+    firewall = cidrhost(local.hub_subnets.AzureFirewallSubnet, 4) #10.1.0.4
   }
 }
 
