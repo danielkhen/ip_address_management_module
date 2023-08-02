@@ -19,7 +19,7 @@ output "hub" {
   value       = {
     vnet_address_prefix  = local.hub_vnet_address_prefix
     vpn_address_prefix   = local.hub_vpn_address_prefix
-    subnets              = local.hub_subnets
+    subnet_address_prefixes              = local.hub_subnets
     private_ip_addresses = local.hub_private_ip_addresses
   }
 }

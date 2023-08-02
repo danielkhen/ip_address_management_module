@@ -11,7 +11,7 @@ locals {
 output "work" {
   description = "An object containing ip addresses and prefixes of resources in the work spoke."
   value       = {
-    vnet_address_prefix = local.work_vnet_address_prefix
-    subnets             = local.work_subnets
+    vnet_address_prefix     = local.work_vnet_address_prefix
+    subnet_address_prefixes = local.work_subnets
   }
 }
