@@ -1,5 +1,4 @@
-locals { #TODO tests and examples
-  #TODO add to git
+locals {
   #TODO add dns zones
   vnet_address_prefixes = {
     hub     = "10.0.0.0/16"
