@@ -3,10 +3,10 @@ locals {
   hub_vpn_address_prefix  = "172.0.0.0/16"
 
   hub_subnets = {
-    GatewaySubnet                 = cidrsubnet(local.hub_vnet_address_prefix, local.subnet_newbits, 0) #10.0.0.0/24
-    AzureFirewallSubnet           = cidrsubnet(local.hub_vnet_address_prefix, local.subnet_newbits, 1) #10.0.1.0/24
-    AzureFirewallManagementSubnet = cidrsubnet(local.hub_vnet_address_prefix, local.subnet_newbits, 2) #10.0.2.0/24
-    ACRSubnet                     = cidrsubnet(local.hub_vnet_address_prefix, local.subnet_newbits, 3) #10.0.3.0/24
+    GatewaySubnet                 = cidrsubnet(local.hub_vnet_address_prefix, 8, 0) #10.0.0.0/24
+    AzureFirewallSubnet           = cidrsubnet(local.hub_vnet_address_prefix, 8, 1) #10.0.1.0/24
+    AzureFirewallManagementSubnet = cidrsubnet(local.hub_vnet_address_prefix, 8, 2) #10.0.2.0/24
+    ACRSubnet                     = cidrsubnet(local.hub_vnet_address_prefix, 8, 3) #10.0.3.0/24
   }
 
   hub_private_ip_addresses = {

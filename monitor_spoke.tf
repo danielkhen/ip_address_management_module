@@ -2,7 +2,7 @@ locals {
   monitor_vnet_address_prefix = "10.2.0.0/16"
 
   monitor_subnets = {
-    MonitorSubnet = cidrsubnet(local.monitor_vnet_address_prefix, local.subnet_newbits, 0) #10.2.0.0/24
+    MonitorSubnet = cidrsubnet(local.monitor_vnet_address_prefix, 8, 0) #10.2.0.0/24
   }
 }
 
